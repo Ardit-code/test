@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang ="sq"
+<head>
+    <meta charset="UTF-8"
+    <title>Loje - Gjeje numrin</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    background; linear-gradient(120deg #74edb5, #9face6);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .game{
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        width: 300px;
+        box-shadow: 0 10px 20px rgba (0,0,0,0.2);
+    }
+    input {
+        padding: 10px;
+        width: 80%;
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    button {
+        padding: 10px 20px;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+    button:hover{
+        background: #45a049;
+    }
+    #message{
+        margin-top: 15px;
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <div class="game">
+        <h1>Ensari eshte nje bulash</h1>
+        <p> Kam zgjedhur nje numer nga 1 deri ne 10</p>
+        <input type="number" id="guess" placeholder="shkruaj numrin"
+        <button onclick="checknumber"()">Provo</button>"
+        <p id="message"></p>
+    </div>
+    <script>
+        let randomnumber = Math.floor(Math.random() * 10) +1;
+        function checknumber(){
+
+            let userGuess = document.getElementById(guesss).value;
+            let message = document.getElementById("message");
+
+            if (userGuess == randomnumber) {
+                message.textContent = "urime keni fituar nje shole me mut!";
+                message.style.color = "green";
+            }else {
+                message.textContent = "jaaaa e hupe badihava dopsir ha ha kallu.";
+                message.style.color = "red";
+            }
+        }
+        </script>
+</body>
+</html>
