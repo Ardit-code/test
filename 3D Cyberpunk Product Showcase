@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NEON CORE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg"></div>
+
+<header>
+  <h1>NEON<span>CORE</span></h1>
+</header>
+
+<section class="scene">
+
+  <div class="cube">
+    <div class="face front">AI POWER</div>
+    <div class="face back">QUANTUM CHIP</div>
+    <div class="face right">5D SOUND</div>
+    <div class="face left">HOLOGRAM UI</div>
+    <div class="face top">12K DISPLAY</div>
+    <div class="face bottom">ZERO LATENCY</div>
+  </div>
+
+</section>
+
+<section class="info">
+  <div class="card">
+    <h2>Future Technology</h2>
+    <p>Powered by advanced neural architecture.</p>
+  </div>
+  <div class="card">
+    <h2>Hyper Speed</h2>
+    <p>Extreme performance without limits.</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 NEON CORE</p>
+</footer>
+
+</body>
+</html>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:black;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* Animated Background */
+.bg{
+  position:fixed;
+  width:200%;
+  height:200%;
+  background:linear-gradient(45deg,#ff00ff,#00ffff,#ff0000,#ff00ff);
+  background-size:400% 400%;
+  animation:move 15s infinite ease;
+  filter:blur(150px);
+  opacity:0.3;
+  z-index:-1;
+}
+
+@keyframes move{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+header{
+  text-align:center;
+  padding:30px;
+  font-size:30px;
+  letter-spacing:3px;
+}
+
+header span{
+  color:#ff00ff;
+}
+
+/* 3D Scene */
+.scene{
+  height:80vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  perspective:1000px;
+}
+
+.cube{
+  position:relative;
+  width:200px;
+  height:200px;
+  transform-style:preserve-3d;
+  animation:rotate 12s infinite linear;
+}
+
+@keyframes rotate{
+  from{transform:rotateX(0) rotateY(0);}
+  to{transform:rotateX(360deg) rotateY(360deg);}
+}
+
+.face{
+  position:absolute;
+  width:200px;
+  height:200px;
+  background:rgba(255,255,255,0.05);
+  border:2px solid #ff00ff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-weight:bold;
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 20px #ff00ff;
+}
+
+/* Positioning cube faces */
+.front{ transform:translateZ(100px); }
+.back{ transform:rotateY(180deg) translateZ(100px); }
+.right{ transform:rotateY(90deg) translateZ(100px); }
+.left{ transform:rotateY(-90deg) translateZ(100px); }
+.top{ transform:rotateX(90deg) translateZ(100px); }
+.bottom{ transform:rotateX(-90deg) translateZ(100px); }
+
+/* Info Section */
+.info{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  padding:100px 20px;
+  flex-wrap:wrap;
+}
+
+.card{
+  width:280px;
+  padding:40px;
+  background:rgba(255,255,255,0.05);
+  border-radius:20px;
+  backdrop-filter:blur(15px);
+  transition:0.5s;
+}
+
+.card:hover{
+  transform:translateY(-15px) scale(1.05);
+  box-shadow:0 0 30px #00ffff;
+}
+
+footer{
+  text-align:center;
+  padding:40px;
+  opacity:0.6;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .cube{
+    width:150px;
+    height:150px;
+  }
+  .face{
+    width:150px;
+    height:150px;
+  }
+}
