@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VORTEX X</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg"></div>
+
+<header>
+    <h1 class="logo">VORTEX<span>X</span></h1>
+    <nav>
+        <a href="#">Model</a>
+        <a href="#">Performance</a>
+        <a href="#">Technology</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Feel The Future</h2>
+    <p>Electric Hypercar – 0-100 km/h in 1.9s</p>
+    <button>Discover More</button>
+</section>
+
+<section class="specs">
+    <div class="card">
+        <h3>1200 HP</h3>
+        <p>Quad Motor System</p>
+    </div>
+    <div class="card">
+        <h3>500 km</h3>
+        <p>Electric Range</p>
+    </div>
+    <div class="card">
+        <h3>350 km/h</h3>
+        <p>Top Speed</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 VORTEX X | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Animated Background */
+.bg {
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #ff0000, #0000ff, #00ffff, #ff0000);
+    background-size: 400% 400%;
+    animation: move 12s ease infinite;
+    filter: blur(120px);
+    opacity: 0.3;
+    z-index: -1;
+}
+
+@keyframes move {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: red;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: red;
+    bottom: -5px;
+    left: 0;
+    transition: 0.4s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.hero h2 {
+    font-size: 70px;
+    animation: fade 2s ease forwards;
+}
+
+.hero p {
+    margin-top: 15px;
+    opacity: 0.7;
+}
+
+.hero button {
+    margin-top: 30px;
+    padding: 12px 35px;
+    background: transparent;
+    border: 2px solid red;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.hero button:hover {
+    background: red;
+    box-shadow: 0 0 20px red;
+}
+
+/* Specs */
+.specs {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 260px;
+    padding: 40px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    text-align: center;
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform: rotateY(15deg) scale(1.05);
+    box-shadow: 0 0 30px red;
+}
+
+footer {
+    text-align: center;
+    margin: 100px 0 30px;
+    opacity: 0.6;
+}
+
+/* Animation */
+@keyframes fade {
+    from {opacity: 0; transform: translateY(40px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+}
