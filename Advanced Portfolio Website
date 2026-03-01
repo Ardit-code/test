@@ -1,0 +1,211 @@
+advanced-portfolio/
+│
+├── index.html
+├── about.html
+├── projects.html
+├── contact.html
+│
+├── css/
+│   └── style.css
+│
+├── images/
+│   └── (vendos fotot tua ketu)
+│
+└── README.md
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ardit Deliu | Advanced Portfolio</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <h2 class="logo">Ardit</h2>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Hi, I'm <span>Ardit Deliu</span></h1>
+    <p>Frontend Developer | HTML & CSS Specialist</p>
+    <a href="projects.html" class="btn">View My Work</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ardit Deliu | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:white;
+  min-height:100vh;
+}
+
+/* NAVBAR */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 10%;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  position:sticky;
+  top:0;
+}
+
+.logo{
+  font-weight:800;
+  font-size:24px;
+}
+
+.nav-links{
+  display:flex;
+  gap:20px;
+  list-style:none;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#00f7ff;
+}
+
+/* HERO SECTION */
+.hero{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:80vh;
+  text-align:center;
+}
+
+.hero-content h1{
+  font-size:50px;
+}
+
+.hero-content span{
+  color:#00f7ff;
+}
+
+.hero-content p{
+  margin:20px 0;
+  font-size:18px;
+}
+
+.btn{
+  padding:12px 30px;
+  background:#00f7ff;
+  color:black;
+  border:none;
+  text-decoration:none;
+  font-weight:600;
+  border-radius:30px;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:white;
+  transform:scale(1.1);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero-content h1{
+    font-size:35px;
+  }
+  .navbar{
+    flex-direction:column;
+    gap:15px;
+  }
+}
+<section class="hero">
+  <div class="hero-content">
+    <h1>About Me</h1>
+    <p>I build advanced, responsive and modern websites using HTML & CSS.</p>
+  </div>
+</section>
+<section class="projects">
+  <h1 style="text-align:center; margin-top:40px;">My Projects</h1>
+  <div class="project-container">
+    <div class="card">
+      <h3>Advanced Game</h3>
+      <p>HTML Game with complex structure</p>
+    </div>
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Modern responsive website</p>
+    </div>
+  </div>
+</section>
+.projects{
+  padding:50px 10%;
+}
+
+.project-container{
+  display:flex;
+  gap:30px;
+  justify-content:center;
+  margin-top:40px;
+}
+
+.card{
+  background:rgba(255,255,255,0.1);
+  padding:30px;
+  border-radius:20px;
+  width:250px;
+  transition:0.4s;
+  backdrop-filter:blur(10px);
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  background:#00f7ff;
+  color:black;
+}
+# 🚀 Advanced Portfolio Website
+
+## Technologies Used:
+- HTML5
+- CSS3
+- Responsive Design
+- Animations
+- Glassmorphism UI
+
+## Features
+- Multi Page
+- Modern Design
+- Mobile Friendly
+- Hover Effects
